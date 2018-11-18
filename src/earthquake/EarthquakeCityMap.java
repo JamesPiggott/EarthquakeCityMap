@@ -21,7 +21,7 @@ import processing.core.PApplet;
  *  An application with an interactive map displaying earthquake data.
  *  Additional functionality also displays airports and their routes.
  *  @author James Piggott
- *  Date: December 31st, 2015
+ *  Date: November 18th, 2018
  * */
 public class EarthquakeCityMap extends PApplet {
 	

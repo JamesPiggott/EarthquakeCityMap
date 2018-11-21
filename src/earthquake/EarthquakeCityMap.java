@@ -2,7 +2,7 @@ package earthquake;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import processing.core.PApplet;
 import de.fhpotsdam.unfolding.UnfoldingMap;
 import de.fhpotsdam.unfolding.data.Feature;
 import de.fhpotsdam.unfolding.data.GeoJSONReader;
@@ -15,7 +15,7 @@ import de.fhpotsdam.unfolding.providers.Google;
 import de.fhpotsdam.unfolding.providers.MBTilesMapProvider;
 import de.fhpotsdam.unfolding.providers.Microsoft;
 import de.fhpotsdam.unfolding.utils.MapUtils;
-import processing.core.PApplet;
+
 
 /** EarthquakeCityMap
  *  An application with an interactive map displaying earthquake data.
@@ -23,7 +23,7 @@ import processing.core.PApplet;
  *  @author James Piggott
  *  Date: November 18th, 2018
  * */
-public class EarthquakeCityMap extends PApplet {
+public class EarthquakeCityMap extends PApplet  {
 	
 	// You can ignore this.  It's to get rid of eclipse warnings
 	private static final long serialVersionUID = 1L;

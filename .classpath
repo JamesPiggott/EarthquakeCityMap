@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="C:/Users/Kane/Desktop/JARs/unfolding.0.9.6.jar"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/Kane/Desktop/unfolding.0.9.6.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Kane/Desktop/processing-core.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Kane/Desktop/JARs/core-2.0.5.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Kane/Desktop/JARs/api-2.0.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Kane/Desktop/JARs/jp.go.nict.langrid.commons-1.0.5.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Kane/OneDrive/Documenten/Code Projects/Git Projects/Java/JavaEarthquakeCityMap/unfolding.0.9.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Kane/Desktop/api-2.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Kane/Desktop/core-2.0.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Kane/Desktop/android-src.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Kane/Desktop/jp.go.nict.langrid.commons-1.0.5.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

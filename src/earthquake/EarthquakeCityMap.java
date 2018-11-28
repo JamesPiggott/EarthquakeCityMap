@@ -44,7 +44,7 @@ public class EarthquakeCityMap extends PApplet  {
 	private List<Marker> cityMarkers;
 	
 	private String cityFile = "city-data.json";
-		private String countryFile = "countries.geo.json";
+	private String countryFile = "countries-geo.json";
 	
 	private CommonMarker lastSelected;
 	private CommonMarker lastClicked;
@@ -59,25 +59,25 @@ public class EarthquakeCityMap extends PApplet  {
 	    List<PointFeature> earthquakes = ParseFeed.parseEarthquake(this, earthquakesURL);
 	    quakeMarkers = new ArrayList<Marker>();
 	    
-		List<Feature> countries = GeoJSONReader.loadData(this, countryFile);
-		countryMarkers = MapUtils.createSimpleMarkers(countries);
+//		List<Feature> countries = GeoJSONReader.loadData(this, countryFile);
+//		countryMarkers = MapUtils.createSimpleMarkers(countries);
 	    	    
 	    for(PointFeature feature : earthquakes) {
-	    	if(isLand(feature)) {
+//	    	if(isLand(feature)) {
 	    		quakeMarkers.add(new LandQuakeMarker(feature));
-	    	}
-	    	else {
-	    		quakeMarkers.add(new OceanQuakeMarker(feature));
-	    	}
+//	    	}
+//	    	else {
+//	    		quakeMarkers.add(new OceanQuakeMarker(feature));
+//	    	}
 	    }
 	    map.addMarkers(quakeMarkers);
 	    
-		List<Feature> cities = GeoJSONReader.loadData(this, cityFile);
-		cityMarkers = new ArrayList<Marker>();
-		for(Feature city : cities) {
-			cityMarkers.add(new CityMarker(city));
-		}
-	    map.addMarkers(cityMarkers);
+//		List<Feature> cities = GeoJSONReader.loadData(this, cityFile);
+//		cityMarkers = new ArrayList<Marker>();
+//		for(Feature city : cities) {
+//			cityMarkers.add(new CityMarker(city));
+//		}
+//	    map.addMarkers(cityMarkers);
 	}  
 	
 	public void draw() {
@@ -94,7 +94,7 @@ public class EarthquakeCityMap extends PApplet  {
 		
 		}
 		selectMarkerIfHover(quakeMarkers);
-		selectMarkerIfHover(cityMarkers);
+//		selectMarkerIfHover(cityMarkers);
 		loop();
 	}
 	

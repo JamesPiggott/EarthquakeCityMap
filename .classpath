@@ -2,11 +2,25 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="C:/Users/Kane/Desktop/unfolding.0.9.6.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Kane/Desktop/processing-core.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Kane/Desktop/api-2.0.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Kane/Desktop/core-2.0.5.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Kane/Desktop/android-src.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Kane/Desktop/jp.go.nict.langrid.commons-1.0.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Kane/OneDrive/Documenten/Code Projects/Git Projects/Java/JavaEarthquakeCityMap/lib/core.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Kane/OneDrive/Documenten/Code Projects/Git Projects/Java/JavaEarthquakeCityMap/lib/gluegen-rt.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Kane/OneDrive/Documenten/Code Projects/Git Projects/Java/JavaEarthquakeCityMap/lib/gluegen-rt-natives-linux-amd64.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Kane/OneDrive/Documenten/Code Projects/Git Projects/Java/JavaEarthquakeCityMap/lib/gluegen-rt-natives-linux-armv6hf.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Kane/OneDrive/Documenten/Code Projects/Git Projects/Java/JavaEarthquakeCityMap/lib/gluegen-rt-natives-linux-i586.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Kane/OneDrive/Documenten/Code Projects/Git Projects/Java/JavaEarthquakeCityMap/lib/gluegen-rt-natives-macosx-universal.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Kane/OneDrive/Documenten/Code Projects/Git Projects/Java/JavaEarthquakeCityMap/lib/gluegen-rt-natives-windows-amd64.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Kane/OneDrive/Documenten/Code Projects/Git Projects/Java/JavaEarthquakeCityMap/lib/gluegen-rt-natives-windows-i586.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Kane/OneDrive/Documenten/Code Projects/Git Projects/Java/JavaEarthquakeCityMap/lib/jogl-all.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Kane/OneDrive/Documenten/Code Projects/Git Projects/Java/JavaEarthquakeCityMap/lib/jogl-all-natives-linux-amd64.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Kane/OneDrive/Documenten/Code Projects/Git Projects/Java/JavaEarthquakeCityMap/lib/jogl-all-natives-linux-armv6hf.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Kane/OneDrive/Documenten/Code Projects/Git Projects/Java/JavaEarthquakeCityMap/lib/jogl-all-natives-linux-i586.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Kane/OneDrive/Documenten/Code Projects/Git Projects/Java/JavaEarthquakeCityMap/lib/jogl-all-natives-macosx-universal.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Kane/OneDrive/Documenten/Code Projects/Git Projects/Java/JavaEarthquakeCityMap/lib/jogl-all-natives-windows-amd64.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Kane/OneDrive/Documenten/Code Projects/Git Projects/Java/JavaEarthquakeCityMap/lib/jogl-all-natives-windows-i586.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Kane/OneDrive/Documenten/Code Projects/Git Projects/Java/JavaEarthquakeCityMap/lib/json4processing.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Kane/OneDrive/Documenten/Code Projects/Git Projects/Java/JavaEarthquakeCityMap/lib/libTUIO.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Kane/OneDrive/Documenten/Code Projects/Git Projects/Java/JavaEarthquakeCityMap/lib/log4j-1.2.15.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Kane/OneDrive/Documenten/Code Projects/Git Projects/Java/JavaEarthquakeCityMap/lib/sqlite-jdbc-3.7.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Kane/OneDrive/Documenten/Code Projects/Git Projects/Java/JavaEarthquakeCityMap/lib/unfolding.0.9.7-uscd.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

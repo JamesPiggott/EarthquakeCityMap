@@ -8,5 +8,5 @@ EarthquakeCityMap will display all recent earthquakes worldwide.
 
 ## Manual
 To start the application compile the java code and run the EarthquakeCityMap class file
-EarthquakeCityMap requires an internet connection to use the Earthquake API feed
-
+EarthquakeCityMap requires an Internet connection to use the Earthquake API feed, furthermore it is currently
+set to use the Microsoft Aerial View API because the Google Maps API locks after too many requests.

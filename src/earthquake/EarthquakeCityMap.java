@@ -32,58 +32,79 @@ public class EarthquakeCityMap extends PApplet  {
 	public static String mbTilesString = "blankLight-1-3.mbtiles";
 	
 	//feed with magnitude 2.5+ Earthquakes, 1.0+ also possible (just change the code!)
-	private String earthquakesURL = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/1.0_week.atom"; 
-//	private String earthquakesURLs = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.atom"; 
+//	private String earthquakesURL = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/1.0_week.atom"; 
+	private String earthquakesURL = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.atom"; 
 	
 	// The map
 	private UnfoldingMap map;
+	
+	private UnfoldingMap map1;
+	private UnfoldingMap currentMap;
 
 	// Markers for each earthquake
 	private List<Marker> quakeMarkers;
 	private List<Marker> countryMarkers;
 	private List<Marker> cityMarkers;
 	
-	private String cityFile = "city-data.json";
-	private String countryFile = "countries-geo.json";
+	private String cityFile = "earthquake//city-data.json";
+	private String countryFile = "earthquake//countries-geo.json";
 	
 	private CommonMarker lastSelected;
 	private CommonMarker lastClicked;
 	
 	public void setup() {		
 		size(1100, 900, OPENGL);
+		smooth(); 
 
         map = new UnfoldingMap(this, new Microsoft.AerialProvider());
-
-        MapUtils.createDefaultEventDispatcher(this, map);
+        map1 = new UnfoldingMap(this, new Google.GoogleMapProvider());
+        
+        MapUtils.createDefaultEventDispatcher(this, map, map1);
+        currentMap = map;
 		
 	    List<PointFeature> earthquakes = ParseFeed.parseEarthquake(this, earthquakesURL);
 	    quakeMarkers = new ArrayList<Marker>();
 	    
-//		List<Feature> countries = GeoJSONReader.loadData(this, countryFile);
-//		countryMarkers = MapUtils.createSimpleMarkers(countries);
+		List<Feature> countries = GeoJSONReader.loadData(this, countryFile);
+		countryMarkers = MapUtils.createSimpleMarkers(countries);
 	    	    
 	    for(PointFeature feature : earthquakes) {
-//	    	if(isLand(feature)) {
+	    	if(isLand(feature)) {
 	    		quakeMarkers.add(new LandQuakeMarker(feature));
-//	    	}
-//	    	else {
-//	    		quakeMarkers.add(new OceanQuakeMarker(feature));
-//	    	}
+	    	}
+	    	else {
+	    		quakeMarkers.add(new OceanQuakeMarker(feature));
+	    	}
 	    }
 	    map.addMarkers(quakeMarkers);
+	    map1.addMarkers(quakeMarkers);
 	    
-//		List<Feature> cities = GeoJSONReader.loadData(this, cityFile);
-//		cityMarkers = new ArrayList<Marker>();
-//		for(Feature city : cities) {
-//			cityMarkers.add(new CityMarker(city));
-//		}
-//	    map.addMarkers(cityMarkers);
+		List<Feature> cities = GeoJSONReader.loadData(this, cityFile);
+		cityMarkers = new ArrayList<Marker>();
+		for(Feature city : cities) {
+			cityMarkers.add(new CityMarker(city));
+		}
+		map.addMarkers(cityMarkers);
+		map1.addMarkers(cityMarkers);
 	}  
 	
 	public void draw() {
 		background(230, 230, 230);
-		map.draw();
+		currentMap.draw();
 		addKey();
+//		Location equator = new Location(0.0f, 0.0f);
+//		Location newzealand = new Location(-41.2f, 174.7f);
+//
+//		float maxPanningDistance = 10000; // in km
+//		map.setPanningRestriction(equator, 10000);
+//		map.setRectangularPanningRestriction(alaska, newzealand);
+//		map.zoomToLevel(3); 
+//		map.setZoomRange(1, 10); 
+
+		
+		currentMap.setTweening(true);
+
+		
 	}
 	
 	@Override
@@ -94,7 +115,7 @@ public class EarthquakeCityMap extends PApplet  {
 		
 		}
 		selectMarkerIfHover(quakeMarkers);
-//		selectMarkerIfHover(cityMarkers);
+		selectMarkerIfHover(cityMarkers);
 		loop();
 	}
 	
@@ -271,4 +292,14 @@ public class EarthquakeCityMap extends PApplet  {
 		}
 		return false;
 	}
+	
+	public void keyPressed() {
+	    if (key == '1') {
+	        currentMap = map;
+	    } else if (key == '2') {
+	        currentMap = map1;
+	    } 
+	}
+
+	
 }

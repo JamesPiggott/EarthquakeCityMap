@@ -37,8 +37,8 @@ public class EarthquakeCityMap extends PApplet  {
 	
 	// The map
 	private UnfoldingMap map;
-	
 	private UnfoldingMap map1;
+	
 	private UnfoldingMap currentMap;
 
 	// Markers for each earthquake
@@ -92,19 +92,7 @@ public class EarthquakeCityMap extends PApplet  {
 		background(230, 230, 230);
 		currentMap.draw();
 		addKey();
-//		Location equator = new Location(0.0f, 0.0f);
-//		Location newzealand = new Location(-41.2f, 174.7f);
-//
-//		float maxPanningDistance = 10000; // in km
-//		map.setPanningRestriction(equator, 10000);
-//		map.setRectangularPanningRestriction(alaska, newzealand);
-//		map.zoomToLevel(3); 
-//		map.setZoomRange(1, 10); 
-
-		
-		currentMap.setTweening(true);
-
-		
+		currentMap.setTweening(true);	
 	}
 	
 	@Override
